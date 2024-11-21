@@ -5,10 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "start:dev": "tsx watch ./src/server.ts",
     "start": "node build/server.js",
-    "build": "tsup src --out-dir build"
+    "build": "tsup src --out-dir build",
+    "test:coverage": "vitest run --coverage"
   },
   "keywords": [],
   "author": "",
@@ -16,16 +18,22 @@
   "devDependencies": {
     "@eslint/js": "9.13.0",
     "@types/node": "22.8.1",
+    "@vitest/coverage-v8": "2.1.5",
     "eslint": "9.13.0",
     "globals": "15.11.0",
     "prisma": "5.21.1",
     "tsup": "8.3.5",
     "tsx": "4.19.2",
     "typescript": "5.6.3",
-    "typescript-eslint": "8.11.0"
+    "typescript-eslint": "8.11.0",
+    "vite-tsconfig-paths": "5.1.2",
+    "vitest": "2.1.5",
+    "vitest-tsconfig-paths": "3.4.1"
   },
   "dependencies": {
     "@prisma/client": "5.21.1",
+    "@types/bcryptjs": "2.4.6",
+    "bcryptjs": "2.4.3",
     "dotenv": "16.4.5",
     "fastify": "5.0.0",
     "zod": "3.23.8"
