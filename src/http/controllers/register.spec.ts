@@ -20,10 +20,6 @@ describe('Register', () => {
     };
   });
 
-  afterEach(() => {
-    prismaUserRepository.clear();
-  });
-
   it('Should create user', async () => {
     const email = 'another@hotmail.com';
 

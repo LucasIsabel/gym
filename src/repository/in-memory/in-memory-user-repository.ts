@@ -19,8 +19,4 @@ export class InMemoryUserRepository implements UsersRepository {
     if (!user) return null;
     return user;
   }
-
-  clear() {
-    this.users = [];
-  }
 }
